@@ -23,7 +23,7 @@ class Cave(Resource):
     if choice == "default":
       room_name = 'entrance'
       room_details = "Welcome to the cave of decisions.\n Will you enter the cave?"
-      room_options = ["New Options!\n", "* Look.", "* Enter"]
+      room_options = ["Look.", "Enter."]
 
       return jsonify(genReturn(200, "Succesfully returned default room", room_name, room_details, room_options))
 

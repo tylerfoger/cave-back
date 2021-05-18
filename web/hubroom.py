@@ -16,16 +16,15 @@ def hub(choice, looked, trap):
   room_name = 'hubroom'
   if trap == True and ("straight" in choice or "left" in choice or "right" in choice or "on" in choice):
     room_details = "The floor gives away and you are impaled on spikes 20 feet below."
-    room_options = ["You died. Press the reset button to try again"]
+    room_options = ["You died. Press the reset button to try again."]
     
     return genReturn(302, "Fell into trap", room_name, room_details, room_options)
 
   if "look" in choice:
     room_details = "You see a large plate in the middle of the room."
     room_options = [
-      "New Options!",
-      "* Step Around the plate.",
-      "* Step on the plate",
+      "Step Around the plate.",
+      "Step on the plate.",
       "Left.",
       "Right.",
       "Straight."
@@ -46,7 +45,7 @@ def hub(choice, looked, trap):
   if "around" in choice:
     room_details = "You step around the strange pattern, do you go Left, Right, or Straight?"
     trap = False
-    room_options = ["Left", "Right", "Straight"]
+    room_options = ["Left.", "Right.", "Straight."]
 
     return genReturn(200, "Disabled Trap", room_name, room_details, room_options, looked, trap)
 
@@ -58,9 +57,8 @@ def hub(choice, looked, trap):
         "room_name": "improom",
         "room_details": "You enter a very large room. The sound of splashing water echoes faintly in the distance.",
         "room_options": [
-          "New Options!",
-          "* Look.",
-          "* Move towards the sound.",
+          "Look.",
+          "Move towards the sound.",
         ],
         "looked": False,
         "hp": 20,
@@ -77,10 +75,10 @@ def hub(choice, looked, trap):
       "data": {
         "room_name": "jarroom",
         "room_details": "On the right side of the room there is a fissure that splits the cave in two, barely large enough for you to fit through. You have to take your armor off in order to squeeze through the gap. As you reach the other side, you hear a swirling rattle. On your left you see a large purple jar, it's billowing smoke. On the ground beside the jar, you see an ornate cork. In the center of the room swirls a pile of bones, a skeleton looks to be forming in the middle.",
-        "room_options": ["New options!",
-          "* Kick over the jar.",
-          "* Plug the jar.",
-          "* Try and disrupt the bones."],
+        "room_options": [
+          "Kick over the jar.",
+          "Plug the jar.",
+          "Try and disrupt the bones."],
         "looked": False
       },
     }
@@ -93,7 +91,7 @@ def hub(choice, looked, trap):
       "data": {
         "room_name": "bossroom",
         "room_details": "It's completely dark, you can't see anything! You wander around in the dark until you starve.",
-        "room_options": ["Click the Reset button to try again"],
+        "room_options": ["Click the Reset button to try again."],
         "looked": False,
         "stick": False,
         "hp": 20,
@@ -111,7 +109,7 @@ def hub(choice, looked, trap):
     if looked == True:
        room_options = [
         "Step around the plate.",
-        "Step on the plate",
+        "Step on the plate.",
         "Left.",
         "Right.",
         "Straight."

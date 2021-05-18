@@ -45,8 +45,8 @@ def imp(choice, looked, stick, hp, approach):
     "data": {
       "room_name": "bossroom",
       "room_details": "You smash the imp in the jaw. It recoils in horror and flies through the crack in the ceiling. You make a torch out of your root and step into into a tiny room at the end of the chamber. The door slams behind you. The torch you crafted in the previous room comes in handy, this room would be pitch black without it.",
-      "room_options": ["New Options!",
-   "* Look."],
+      "room_options": [
+   "Look."],
       "looked": False,
       "stick": True,
       "hp": hp
@@ -58,7 +58,7 @@ def imp(choice, looked, stick, hp, approach):
 
   if "look" in choice:
     room_details = "You are in a large room. It is dimly lit by a crack in the ceiling that is letting some sunlight in through the trees above. You see an imp in front of you, it seems to have been approaching since you entered the room. Roots of the trees are poking through the roof, it looks like you could break one off to defend yourself."
-    room_options = ["New Options!",     
+    room_options = [     
         "Move away from the imp.",
         "Grab a root."]
     
@@ -89,7 +89,7 @@ def imp(choice, looked, stick, hp, approach):
   elif looked == True and "root" in choice:
       stick = True
       room_details = "You grab an old, dry root, looks like you can use it as a spear."
-      room_options = ["Move away from the imp"]
+      room_options = ["Move away from the imp!"]
 
       return genReturn(200, "Moved in the imp room", room_name, room_details, room_options, looked, hp, stick, approach) 
 
@@ -110,7 +110,7 @@ def imp(choice, looked, stick, hp, approach):
   
   else:
     room_details = "I dont understand what you're trying to do."
-    room_options = ["Look", "Move towards the sound"]
+    room_options = ["Look.", "Move towards the sound."]
     
     return genReturn(301, "Invalid Choice", room_name, room_details, room_options, looked, hp, stick, approach) 
 

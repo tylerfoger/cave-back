@@ -16,7 +16,7 @@ def jar(choice):
 
   if "kick" in choice:
     room_details = "You kick the jar over - it shatters! Smoke starts to come out even faster.You see your life flash before your eyes on the reflection of the shards as dozens of skeletons appear. Your flesh gets ripped from your bones, as your rise against your will as an animated skeleton."
-    room_options = ["You're dead, click reset to try again"]
+    room_options = ["You're dead, click reset to try again."]
 
     return genReturn(301, "Kicked Jar", room_name, room_details, room_options) 
 
@@ -27,8 +27,8 @@ def jar(choice):
     "data": {
       "room_name": "bossroom",
       "room_details": "You plug the jar with the ornate cork. The smoke stops coming out of the jar. The unfinished skeleton in the center of the room crawls towards you. You're easily able to rekt the skeleton and it collapses to the floor. There's yet another door inside this room. You grab a torch laying on the ground - light it, then enter the room. The door slams behind you! The torch you found in the previous room comes in handy, this room would be pitch black without it.",
-      "room_options": ["\nNew Options!\n",
-   "* Look."],
+      "room_options": [
+   "Look."],
       "looked": False,
       "stick": True,
       "hp": 20

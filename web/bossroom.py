@@ -17,22 +17,21 @@ def boss(choice, looked, stick, hp):
   room_name = "bossroom"
 
   if hp <= 0:
-    room_details = "You are killed by the shadow"
+    room_details = "You are killed by the shadow."
     room_options = ["You're dead, hit the reset button to try again."]
 
     return genReturn(302, "Killed by the Shadow", room_name, room_details, room_options, looked, hp, stick)
 
   if stick == False:
     room_details = "It's completely dark, you can't see anything! You wander around in the dark until you starve."
-    room_options = ["Click the Reset button to try again"]
+    room_options = ["Click the Reset button to try again."]
         
     return genReturn(302, "Die of starvation in boss room", room_name, room_details, room_options, looked, hp, stick) 
 
   if "look" in choice:
     room_details = "The walls of the room are bare, all that you can see is your shadow reflecting off the walls. You search for an exit for a few hours, but come up with nothing. As you are about to give up hope, you notice that your shadow isn't exactly mirroring your actions. The shadow stops moving completely and appears to grow darker. The wall almost looks like it's covered in ink. First a ripple forms on the surface, then suddenly a pitch black mirror image of yourself pushes itself away from the wall and lunges at you."
-    room_options = ["New options!",      
-      "* Back up.",
-      "* Put out your light.",]
+    room_options = ["Back up.",
+      "Put out your light.",]
     
     if looked == True:
       room_options = ["You've already looked around!",      
@@ -58,6 +57,6 @@ def boss(choice, looked, stick, hp):
 
   else:
     room_details = "I dont understand what you're trying to do."
-    room_options = ["Look"]
+    room_options = ["Look."]
     
     return genReturn(301, "Invalid Choice", room_name, room_details, room_options, looked, hp, stick) 
